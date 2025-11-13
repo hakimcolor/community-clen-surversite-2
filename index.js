@@ -128,7 +128,7 @@ async function run() {
     app.post('/contributions', async (req, res) => {
       try {
         const contribution = req.body;
-        console.log('Received Contribution:', contribution);
+        // console.log('Received Contribution:', contribution);
         const result = await contributionsCollection.insertOne(contribution);
         res.status(201).send(result);
       } catch (error) {
