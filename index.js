@@ -84,7 +84,7 @@ async function run() {
     });
 
     // DELETE: Delete my issue by ID
-    app.delete('/myissues/:id', async (req, res) => {
+    app.delet('/myissues/:id', async (req, res) => {
       const id = req.params.id;
       try {
         const result = await myissues.deleteOne({ _id: new ObjectId(id) });
@@ -111,7 +111,7 @@ async function run() {
     });
 
     // POST: Add my issue
-    app.pos('/myissue', async (req, res) => {
+    app.post('/myissue', async (req, res) => {
       const issues = req.body;
       const result = await myissues.insertOne(issues);
       res.send(result);
