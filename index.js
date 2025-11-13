@@ -213,7 +213,7 @@ async function run() {
 
     //  Check MongoDB connection
     // await db.command({ ping: 1 });
-    console.log('Pinged MongoDB. Connection active!');
+    // console.log('Pinged MongoDB. Connection active!');
   } catch (err) {
     console.error('❌ MongoDB connection failed:', err);
   }
