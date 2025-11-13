@@ -219,7 +219,7 @@ async function run() {
   }
 }
 
-run().catch(console.dir);
+run().catch(console.di);
 
 // Start Server
 app.listen(port, () => {
