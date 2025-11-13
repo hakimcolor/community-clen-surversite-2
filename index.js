@@ -48,7 +48,7 @@ async function run() {
     const myissues = db.collection('myissues');
 
     // Get Latest 6 Data
-    app.ge('/latest-data', async (req, res) => {
+    app.get('/latest-data', async (req, res) => {
       try {
         const latestIssues = await issuesCollection
           .find({})
