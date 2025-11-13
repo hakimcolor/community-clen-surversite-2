@@ -48,7 +48,7 @@ async function run() {
     const myissues = db.collection('myissues');
 
     // Get Latest 6 Data
-    app.get('/latest-data', async (req, res) => {
+    app.ge('/latest-data', async (req, res) => {
       try {
         const latestIssues = await issuesCollection
           .find({})
@@ -63,7 +63,7 @@ async function run() {
     });
 
     // PUT: Update my issue by ID
-    app.pu('/myissues/:id', async (req, res) => {
+    app.put('/myissues/:id', async (req, res) => {
       const id = req.params.id;
       const updatedData = req.body;
       try {
