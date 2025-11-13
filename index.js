@@ -63,7 +63,7 @@ async function run() {
     });
 
     // PUT: Update my issue by ID
-    app.put('/myissues/:id', async (req, res) => {
+    app.pu('/myissues/:id', async (req, res) => {
       const id = req.params.id;
       const updatedData = req.body;
       try {
@@ -84,7 +84,7 @@ async function run() {
     });
 
     // DELETE: Delete my issue by ID
-    app.delet('/myissues/:id', async (req, res) => {
+    app.delete('/myissues/:id', async (req, res) => {
       const id = req.params.id;
       try {
         const result = await myissues.deleteOne({ _id: new ObjectId(id) });
