@@ -111,7 +111,7 @@ async function run() {
     });
 
     // POST: Add my issue
-    app.post('/myissue', async (req, res) => {
+    app.pos('/myissue', async (req, res) => {
       const issues = req.body;
       const result = await myissues.insertOne(issues);
       res.send(result);
@@ -219,7 +219,7 @@ async function run() {
   }
 }
 
-run().catch(console.di);
+run().catch(console.dir);
 
 // Start Server
 app.listen(port, () => {
