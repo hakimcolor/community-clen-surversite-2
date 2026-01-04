@@ -117,7 +117,7 @@ async function run() {
       res.send(result);
     });
 
-    // POST: Add issue to AllIssue
+    // POST: Add issue to AllIssuue
     app.post('/issue', async (req, res) => {
       const issues = req.body;
       const result = await issuesCollection.insertOne(issues);
